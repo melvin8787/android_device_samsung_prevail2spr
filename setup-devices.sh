@@ -1,7 +1,7 @@
 #!/bin/sh
 
 VENDOR=samsung
-DEVICE=iconvmu
+DEVICE=prevail2spr
 find * > device-copyfiles.txt
 # OUTDIR=device/$VENDOR/$DEVICE
 MAKEFILE=$DEVICE-copyfiles.mk

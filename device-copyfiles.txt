@@ -35,7 +35,7 @@ keylayout/sec_powerkey.kl
 keylayout/AVRCP.kl
 keylayout/fluid-keypad.kl
 keylayout/Generic.kl
-keylayout/icon-keypad.kl
+keylayout/prevail2spr-keypad.kl
 keylayout/sii9234_rcp.kl
 
 recovery/graphics.c

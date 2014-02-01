@@ -5,20 +5,21 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
-$(call inherit-product-if-exists, vendor/samsung/iconvmu/iconvmu-vendor.mk)
+$(call inherit-product-if-exists, 
+vendor/samsung/prevail2spr/prevail2spr-vendor.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/samsung/iconvmu/overlay
+DEVICE_PACKAGE_OVERLAYS += device/samsung/prevail2spr/overlay
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 
-LOCAL_PATH := device/samsung/iconvmu
+LOCAL_PATH := device/samsung/prevail2spr
 
 $(call inherit-product, build/target/product/full.mk)
 
 UTC_DATE := $(shell date +%s)
 DATE := $(shell date +%Y%m%d)
 
-PRODUCT_NAME := full_iconvmu
-PRODUCT_DEVICE := iconvmu
+PRODUCT_NAME := full_prevail2spr
+PRODUCT_DEVICE := prevail2spr
 
 PRODUCT_LOCALES := en_US
 PRODUCT_LOCALES += hdpi
@@ -183,7 +184,7 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/keylayout/sec_powerkey.kl:system/usr/keylayout/sec_powerkey.kl \
 	$(LOCAL_PATH)/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
 	$(LOCAL_PATH)/keylayout/fluid-keypad.kl:system/usr/keylayout/fluid-keypad.kl \
-	$(LOCAL_PATH)/keylayout/icon-keypad.kl:system/usr/keylayout/icon-keypad.kl \
+	$(LOCAL_PATH)/keylayout/prevail2spr-keypad.kl:system/usr/keylayout/prevail2spr-keypad.kl \
 	$(LOCAL_PATH)/keylayout/sii9234_rcp.kl:system/usr/keylayout/sii9234_rcp.kl
 
 PRODUCT_COPY_FILES += \

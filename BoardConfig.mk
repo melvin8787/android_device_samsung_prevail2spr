@@ -1,10 +1,10 @@
-LOCAL_PATH := device/samsung/iconvmu
+LOCAL_PATH := device/samsung/prevail2spr
 
 # inherit from the proprietary version
--include vendor/samsung/iconvmu/BoardConfigVendor.mk
+-include vendor/samsung/prevail2spr/BoardConfigVendor.mk
 
 #Assert 
-TARGET_OTA_ASSERT_DEVICE := iconvmu,Reverb
+TARGET_OTA_ASSERT_DEVICE := prevail2spr,Rush
 
 # Global flags
 COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE
@@ -29,7 +29,7 @@ TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
 TARGET_BOOTANIMATION_PRELOAD := true
 
 # Graphics
-BOARD_EGL_CFG := device/samsung/iconvmu/configs/egl.cfg
+BOARD_EGL_CFG := device/samsung/prevail2spr/configs/egl.cfg
 USE_OPENGL_RENDERER := true
 TARGET_USES_C2D_COMPOSITION := true
 #BOARD_USES_SKIAHWJPEG := true
@@ -52,9 +52,7 @@ BOARD_KERNEL_BASE := 0x00400000
 BOARD_FORCE_RAMDISK_ADDRESS := 0x01700000
 BOARD_KERNEL_PAGESIZE := 2048
 
-TARGET_PREBUILT_KERNEL := device/samsung/iconvmu/kernel
-TARGET_KERNEL_CONFIG := icon00_defconfig
-TARGET_KERNEL_SOURCE := kernel/samsung/iconvmu/
+TARGET_PREBUILT_KERNEL := device/samsung/prevail2spr/kernel
 
 # fix this up by examining /proc/mtd on a running device
 BOARD_BOOTIMAGE_PARTITION_SIZE := 0xA00000
@@ -62,10 +60,8 @@ BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0xA00000
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0x3891A000
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/iconvmu/recovery/graphics.c
-
-TARGET_SCREEN_HEIGHT := 800
-TARGET_SCREEN_WIDTH := 480
+TARGET_SCREEN_HEIGHT := 480
+TARGET_SCREEN_WIDTH := 320
 
 BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_HAS_NO_SELECT_BUTTON := true
@@ -126,7 +122,7 @@ BOARD_EGL_CFG := $(LOCAL_PATH)/config/egl.cfg
 
 #twrp
 
-DEVICE_RESOLUTION := 480x800
+DEVICE_RESOLUTION := 320x480
 RECOVERY_SDCARD_ON_DATA := true
 TW_INTERNAL_STORAGE_PATH := "/data/media"
 TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
